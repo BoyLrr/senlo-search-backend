@@ -1,6 +1,7 @@
 package com.lee.senlosearch.service;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.lee.senlosearch.model.dto.user.UserQueryRequest;
 import com.lee.senlosearch.model.entity.User;
@@ -118,4 +119,9 @@ public interface UserService extends IService<User> {
      */
     QueryWrapper<User> getQueryWrapper(UserQueryRequest userQueryRequest);
 
+    /**
+     * 搜索用户
+     * @param userQueryRequest
+     */
+     Page<UserVO> listUserVOByPage(UserQueryRequest userQueryRequest);
 }

@@ -22,7 +22,7 @@ import java.util.Map;
  * @from <a href="https://yupi.icu">编程导航知识星球</a>
  */
 //取消注释后，每次启动springboot项目时会执行一次run方法
-@Component
+//@Component
 @Slf4j
 public class FetchInitPostList implements CommandLineRunner {
 
@@ -53,7 +53,6 @@ public class FetchInitPostList implements CommandLineRunner {
             post.setUserId(1L);
             postList.add(post);
         }
-        System.out.println(postList);
         boolean b = postService.saveBatch(postList);
     }
 }

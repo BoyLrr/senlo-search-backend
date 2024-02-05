@@ -1,20 +1,20 @@
-package com.lee.senlosearch.model.dto.picture;
+package com.lee.senlosearch.model.dto.search;
 
 import com.lee.senlosearch.common.PageRequest;
-import java.io.Serializable;
-
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
+import java.io.Serializable;
+
 /**
- * 图片参数
+ * 聚合搜索参数
  *
  * @author <a href="https://github.com/liyupi">程序员鱼皮</a>
  * @from <a href="https://yupi.icu">编程导航知识星球</a>
  */
 @EqualsAndHashCode(callSuper = true)
 @Data
-public class PictureQueryRequest extends PageRequest implements Serializable {
+public class SearchRequest extends PageRequest implements Serializable {
     /**
      * 搜索词
      */
