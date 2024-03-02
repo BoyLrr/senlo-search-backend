@@ -2,6 +2,8 @@ package com.lee.senlosearch.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.lee.senlosearch.model.entity.Post;
+import org.apache.ibatis.annotations.Mapper;
+
 import java.util.Date;
 import java.util.List;
 

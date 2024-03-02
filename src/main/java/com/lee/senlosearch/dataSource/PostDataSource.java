@@ -2,6 +2,7 @@ package com.lee.senlosearch.dataSource;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.lee.senlosearch.model.dto.post.PostQueryRequest;
+import com.lee.senlosearch.model.entity.Post;
 import com.lee.senlosearch.model.vo.PostVO;
 import com.lee.senlosearch.service.PostService;
 import lombok.extern.slf4j.Slf4j;
@@ -29,8 +30,8 @@ public class PostDataSource implements DataSource<PostVO> {
         postQueryRequest.setPageSize(pageSize);
         ServletRequestAttributes servletRequestAttributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
         HttpServletRequest request = servletRequestAttributes.getRequest();
-        Page<PostVO> postVOPage = postService.listPostVOByPage(postQueryRequest, request);
-        return postVOPage;
+        Page<Post> postPage = postService.searchFromEs(postQueryRequest);
+        return postService.getPostVOPage(postPage,request);
     }
 }
 

@@ -44,15 +44,6 @@ import java.util.concurrent.CompletableFuture;
 public class SearchController {
 
     @Resource
-    private PictureService pictureService;
-
-    @Resource
-    private UserService userService;
-
-    @Resource
-    private PostService postService;
-
-    @Resource
     private SearchFacade searchFacade;
     @PostMapping("all")
     public BaseResponse<SearchVO> searchAll(@RequestBody SearchRequest searchRequest, HttpServletRequest request) {
